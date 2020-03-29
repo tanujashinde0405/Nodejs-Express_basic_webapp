@@ -1,0 +1,23 @@
+<%- include('partials/header.ejs'); -%>
+
+<h1> add a Customer</h1>
+<form method="POST" action="/adduser"> 
+    <label>Name</label>&nbsp;&nbsp;&nbsp;&nbsp;
+    <input type="text" placeholder="Name" name="name">
+    <br><br>
+    <label>Address</label>&nbsp;&nbsp;&nbsp;&nbsp;
+    <input type="text" placeholder="Address" name="address">
+    <br><br>
+    <label>Age</label>&nbsp;&nbsp;&nbsp;&nbsp;
+    <input type="text" placeholder="Age" name="age">
+    <br><br>
+    <input type="submit" value="submit">
+</form>
+<h1> <%= title %></h1>
+<ul>
+    <% users.forEach(function(user){ %>
+    <li><%= user.id %> <%= user.name %> <%= user.age %></li>
+    <% }) %>
+</ul>
+
+<%- include('partials/footer.ejs'); -%>
